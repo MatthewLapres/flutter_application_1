@@ -1,0 +1,28 @@
+Solidity
+{
+	statically typed,	
+	inheritance, user-defined types,
+	always use the latest version 
+	or you will not get security updates
+	
+	Pragma is a keyword which gives special instructions to the compiler
+	This is local to each file and is not imported
+}
+
+
+Below is a simple smart contract
+--------------------------------------------
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.4.16 <0.9.0;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
+}
